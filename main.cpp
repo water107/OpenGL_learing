@@ -175,9 +175,9 @@ void prepareTexture() {
 void render() {
     GL_CALL(glClear(GL_COLOR_BUFFER_BIT));  //画布清理
     shader->begin();  // 渲染调用着色器程序
-    shader->setFloat("time", glfwGetTime()); 
+    shader->setFloat("time", glfwGetTime());
     shader->setInt("kiri_sampler", 3);
-    glBindVertexArray(vao);		// 绑定 VAO
+    glBindVertexArray(vao);		
     glDrawElements(GL_TRIANGLES, 6, GL_UNSIGNED_INT, 0);
     // 如果使用了ebo， 最后一个参数可以写0
     // 如果使用了ebo， 假设最后一个参数是数字，表示ebo内偏移量,比如只用后三个点画三角形
