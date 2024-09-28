@@ -9,8 +9,6 @@ out vec3 color;  //向下个阶段输出color的变量
 out vec2 uv;
 
 void main(){
-//	float dx = 0.3;
-//	float offsetX = sin(time * speed) * dx;
 	float scale = 1.0 / time;
 	vec3 sPos = aPos * scale;
 	gl_Position = vec4(sPos, 1.0);
